@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Snowflake/Cold icon -->
+  <g stroke="#0088cc" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Main cross -->
+    <line x1="32" y1="8" x2="32" y2="36"/>
+    <line x1="20" y1="15" x2="44" y2="29"/>
+    <line x1="44" y1="15" x2="20" y2="29"/>
+    <!-- Branches -->
+    <line x1="32" y1="8" x2="28" y2="12"/>
+    <line x1="32" y1="8" x2="36" y2="12"/>
+    <line x1="32" y1="36" x2="28" y2="32"/>
+    <line x1="32" y1="36" x2="36" y2="32"/>
+    <line x1="20" y1="15" x2="22" y2="19.5"/>
+    <line x1="44" y1="29" x2="42" y2="24.5"/>
+    <line x1="44" y1="15" x2="42" y2="19.5"/>
+    <line x1="20" y1="29" x2="22" y2="24.5"/>
+    <!-- Small dots at tips -->
+    <circle cx="32" cy="6" r="1.5" fill="#0088cc" stroke="none"/>
+    <circle cx="32" cy="38" r="1.5" fill="#0088cc" stroke="none"/>
+    <circle cx="18" cy="14" r="1.5" fill="#0088cc" stroke="none"/>
+    <circle cx="46" cy="30" r="1.5" fill="#0088cc" stroke="none"/>
+    <circle cx="46" cy="14" r="1.5" fill="#0088cc" stroke="none"/>
+    <circle cx="18" cy="30" r="1.5" fill="#0088cc" stroke="none"/>
+  </g>
+  <!-- Wave underneath -->
+  <path d="M8 48 Q16 42, 24 48 Q32 54, 40 48 Q48 42, 56 48" stroke="#0088cc" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M8 54 Q16 48, 24 54 Q32 60, 40 54 Q48 48, 56 54" stroke="#0088cc" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+</svg>
