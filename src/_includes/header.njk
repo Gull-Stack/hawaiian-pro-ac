@@ -1,0 +1,40 @@
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <img src="/images/hawaiian-pro-ac-logo.jpg" alt="Hawaiian Pro Air Conditioning" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-name">HAWAIIAN PRO</span>
+          <span class="logo-tagline">AIR CONDITIONING</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/"{% if page.url == "/" %} class="active"{% endif %}>Home</a></li>
+          <li class="nav-dropdown">
+            <a href="/services/"{% if page.url and "/services/" in page.url %} class="active"{% endif %}>Services</a>
+            <div class="nav-dropdown-content">
+              <a href="/services/ac-installation/">AC Installation</a>
+              <a href="/services/ac-repair-maintenance/">Repair & Maintenance</a>
+            </div>
+          </li>
+          <li><a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}>About</a></li>
+          <li><a href="/contact/"{% if page.url == "/contact/" %} class="active"{% endif %}>Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="tel:8086645751" class="header-cta">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (808) 664-5751
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>

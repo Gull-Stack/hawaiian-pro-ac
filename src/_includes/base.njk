@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description | default('Hawaiian Pro Air Conditioning - Professional AC installation, repair, and maintenance serving Kailua and all of Oahu. Licensed HVAC experts. Call (808) 664-5751.') }}">
+  <meta name="author" content="Hawaiian Pro Air Conditioning">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title | default('Hawaiian Pro Air Conditioning | Kailua, Hawaii') }}">
+  <meta property="og:description" content="{{ description | default('Professional air conditioning installation, repair, and maintenance serving Kailua and all of Oahu. Licensed HVAC technicians. Call (808) 664-5751.') }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hawaiianproac.com{{ page.url }}">
+  <meta property="og:image" content="https://hawaiianproac.com/images/hawaiian-pro-truck.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Hawaiian Pro Air Conditioning">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title | default('Hawaiian Pro Air Conditioning | Kailua, Hawaii') }}">
+  <meta name="twitter:description" content="{{ description | default('Professional AC installation, repair, and maintenance serving Oahu. Call (808) 664-5751.') }}">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://hawaiianproac.com{{ page.url }}">
+
+  <title>{{ title | default('Hawaiian Pro Air Conditioning | Kailua, Hawaii') }}</title>
+
+  <!-- Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  {% block schema %}{% endblock %}
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  {% include "header.njk" %}
+
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include "footer.njk" %}
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener('click', function() {
+        mainNav.classList.toggle('active');
+      });
+    }
+
+    // Close mobile nav when clicking a link
+    document.querySelectorAll('.main-nav a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (window.innerWidth < 1024) {
+          mainNav.classList.remove('active');
+        }
+      });
+    });
+
+    // Mobile dropdown toggle
+    document.querySelectorAll('.nav-dropdown > a').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        if (window.innerWidth < 1024) {
+          e.preventDefault();
+          this.parentElement.classList.toggle('active');
+        }
+      });
+    });
+
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    if (header) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
